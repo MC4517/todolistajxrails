@@ -1,0 +1,6 @@
+<ul id="task_list_<%= category ? category.gsub(/[ \/\\,:]/,"-") : "" %>">
+  <% tasks.each do |task|  %>
+    <%= render "tasks/task", task: task %>
+    <%= check_box_tag :name, 1, CheckedOuPas? , data: { remote: true, url: TonURL, params: { id: ExampleID, status: StatusValue}.to_param, method: "put" }%>
+  <% end %>
+</ul>

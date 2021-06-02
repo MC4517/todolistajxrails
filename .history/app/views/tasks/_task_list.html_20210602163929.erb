@@ -1,0 +1,7 @@
+<ul id="task_list_<%= category ? category.gsub(/[ \/\\,:]/,"-") : "" %>">
+  <% tasks.each do |task|  %>
+    <%= render "tasks/task", task: task %>
+    <%= form_tag complete_user_tasks_path, remote: true %>
+<% end %>
+  <% end %>
+</ul>

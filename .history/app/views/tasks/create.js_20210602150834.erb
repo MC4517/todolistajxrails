@@ -1,0 +1,1 @@
+document.getElementById("task-list" + "<%= j @task.category.title.gsub(/[ \/\\,:]/,"-") %>")).insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>")

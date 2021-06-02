@@ -1,0 +1,2 @@
+document.getElementById("task-list" + "<%= j @task.category.title %>").insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>")
+('#likes').html("<%= j render partial: 'tasks/likes', task: task %>");
