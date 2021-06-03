@@ -1,0 +1,19 @@
+<div class="container">
+	<p>
+		<%= link_to "Recevoir un email", emails_path, method: :post, remote: true, class:"btn btn-success" %>
+	</p>
+	<div class="row">
+		<div class="col-md-4 border p-0">
+			<table class="table table-hover m-0">
+	  			<tbody id="emails">
+					<% @emails.sort_by {|email|email.created_at}.reverse.each do |email| %>
+						<%= render 'email_in_list', email: email  %>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-8 border-top border-right border-bottom" id="body">
+			
+		</div>
+	</div>
+</div>

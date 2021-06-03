@@ -1,0 +1,11 @@
+<tr>
+									<td class="action"><input type="checkbox" /></td>
+									<td class="action"><i class="fa fa-star-o"></i></td>
+									<td class="action"><i class="fa fa-bookmark-o"></i></td>
+									<td class="name"><a href="#"><td><%= email.object %></td></a></td>
+									<td class="subject"><a href="#"><td><%= email.body %></td></a></td>
+ <td><%= link_to 'Show', email %></td>
+                   <td><%= link_to 'Edit', edit_email_path(email) %></td>
+                   <td><%= link_to 'Destroy', email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+									<td class="time">08:30 PM</td>
+								</tr>

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Emails</h1>
+
+
+    <% @emails.each do |email| %>
+    <tr>
+        <td><%= email.object %></td>
+        <td><%= email.text %></td>
+        <td><%= link_to 'Show', email %></td>
+        <td><%= link_to 'Edit', edit_email_path(email) %></td>
+        <td><%= link_to 'Destroy', email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+   
+    <% end %>
+ 
+
+<%= link_to 'New Email', new_email_path %>

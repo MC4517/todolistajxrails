@@ -1,0 +1,11 @@
+alert ('test')
+if (<%= @email.lu == false %>) {
+    document.getElementById("<%=@email.object%>").removeAttribute("bg-white");
+    document.getElementById("<%=@email.object%>").setAttribute("bg-light");
+            }
+    else {
+    document.getElementById("<%=@email.object%>").removeAttribute("bg-light");
+    document.getElementById("<%=@email.object%>").setAttribute("bg-white");
+            }
+
+
